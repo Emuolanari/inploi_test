@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-[#83D1A6] via-[#86DCCA] to-[#F6f9EB]">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]">
       <div className="relative">
         <button className="absolute bg-primary text-white text-sm py-2 px-6 rounded-md top-6 right-7">
           Login

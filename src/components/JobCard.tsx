@@ -12,7 +12,7 @@ export const JobCard: React.FC<Props> = ({ description, location, title }) => {
 
   return (
     <div
-      className="flex flex-col rounded-md bg-white px-6"
+      className="flex flex-col rounded-lg shadow-sm shadow-gray-400 bg-white px-6"
       onClick={() => {
         if (!descriptionOpen) setDescriptionOpen(true)
       }}
@@ -31,21 +31,20 @@ export const JobCard: React.FC<Props> = ({ description, location, title }) => {
           />
         )}
       </div>
-      {descriptionOpen ? (
-        <>
-          <hr />
-          <div className="flex flex-col py-6">
-            <p>{description}</p>
-            <div className="flex justify-between mt-5">
-              <p className="text-gray-400">{location}</p>
-              <button className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 rounded-md">
-                <span className="text-sm">Apply now</span>{' '}
-                <ChevronRightIcon className="w-5 h-5" />
-              </button>
-            </div>
+      {/* come back to this to ease the description into view slowly */}
+      <div className={`${descriptionOpen ? 'transition' : 'hidden'}`}>
+        <hr />
+        <div className="flex flex-col py-6">
+          <p>{description}</p>
+          <div className="flex justify-between mt-5">
+            <p className="text-gray-400">{location}</p>
+            <button className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 rounded-md">
+              <span className="text-sm">Apply now</span>{' '}
+              <ChevronRightIcon className="w-5 h-5" />
+            </button>
           </div>
-        </>
-      ) : null}
+        </div>
+      </div>
     </div>
   )
 }
