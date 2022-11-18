@@ -40,7 +40,7 @@ const Hit: React.FC<Props> = ({ hit }) => {
           </p>
           <p>
             <span className="font-bold">Job title:</span>{' '}
-            {hit.title.replace('_', '-')}
+            {hit.title.replace(/_/g, '-')}
           </p>
         </div>
         <div className="flex justify-between flex-col sm:flex-row">
