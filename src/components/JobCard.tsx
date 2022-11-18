@@ -6,7 +6,8 @@ export const JobCard: React.FC = ({ hit }: any) => {
 
   return (
     <div
-      className="flex flex-col rounded-lg shadow-sm shadow-gray-400 bg-white px-6 text-xs sm:text-sm md:text-base"
+      className="flex flex-col rounded-lg shadow-sm shadow-gray-400
+       bg-white mx-2 px-6 text-xs sm:text-sm md:text-base my-3"
       onClick={() => {
         if (!descriptionOpen) setDescriptionOpen(true)
       }}
