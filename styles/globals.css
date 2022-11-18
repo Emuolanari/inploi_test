@@ -30,8 +30,11 @@ a {
 .ais-SearchBox-submitIcon {
   position: absolute;
   right: 8px;
+  height: 0.9rem;
+  width: 0.9rem;
   top: 23px;
 }
+
 .ais-SearchBox-resetIcon {
   display: none;
 }
@@ -39,8 +42,7 @@ a {
   display: block;
   width: 100%;
   font-size: 2px;
-  padding: 1rem;
-  padding-left: 2.5rem;
+  padding: 1rem 2rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #1a202c;
@@ -56,7 +58,7 @@ a {
 }
 
 .ais-SearchBox input:focus {
-  border: #86dcca;
+  outline: none;
 }
 .ais-Hits-list {
   margin-top: 10px;
