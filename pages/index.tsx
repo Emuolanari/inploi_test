@@ -2,8 +2,6 @@ import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 // import { hitsPerPage } from 'instantsearch.js/es/widgets';
 import algoliasearch from 'algoliasearch/lite'
 import Hit from '../src/components/Hit'
-import Head from 'next/head'
-import { JobCard } from '../src/components/JobCard'
 
 export default function Home() {
   const searchClient = algoliasearch(

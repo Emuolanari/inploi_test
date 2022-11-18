@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 interface Props {
-  hit: any
+  hit: any //find type
 }
 
 const Hit: React.FC<Props> = ({ hit }) => {
@@ -9,7 +9,7 @@ const Hit: React.FC<Props> = ({ hit }) => {
 
   return (
     <div className="mt-2">
-      <div className="flex flex-col rounded-md bg-white py-6 px-6 max-w-2xl ">
+      <div className="flex flex-col rounded-md bg-white py-6 px-6 max-w-2xl shadow-md">
         <div className="flex justify-between mb-2">
           {/* couldn't use next image because of various domains */}
           <div className="flex flex-col sm:flex-row gap-5 items-center">
