@@ -19,7 +19,7 @@ export default function Home() {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
     if (searchTerm)
-      router.push({ pathname: '/jobs', query: { query: searchTerm } })
+      router.push({ pathname: '/jobs', query: { query: searchTerm, page: 1 } })
   }
 
   return (

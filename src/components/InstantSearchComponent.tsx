@@ -18,7 +18,11 @@ export const InstantSearchComponent: React.FC<Props> = ({
   )
 
   const searchStateToUrl = (searchState: any) =>
-    searchState ? `${router.pathname}?${router.query}` : ''
+    searchState
+      ? `${router.pathname.toString()}?query=${router.query.query}&page=${
+          router.query.page
+        }`
+      : ''
 
   const onSearchStateChange = (searchState: any) => {
     const href = searchStateToUrl(searchState)
