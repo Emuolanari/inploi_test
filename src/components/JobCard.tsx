@@ -12,7 +12,7 @@ export const JobCard: React.FC<Props> = ({ description, location, title }) => {
 
   return (
     <div
-      className="flex flex-col rounded-lg shadow-sm shadow-gray-400 bg-white px-6"
+      className="flex flex-col rounded-lg shadow-sm shadow-gray-400 bg-white px-6 text-xs sm:text-sm md:text-base"
       onClick={() => {
         if (!descriptionOpen) setDescriptionOpen(true)
       }}
