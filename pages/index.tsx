@@ -35,7 +35,7 @@ export default function Home() {
               translations={{
                 placeholder: 'Search jobs by keyword or location',
               }}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => setSearchTerm(e.currentTarget.value)}
               onSubmit={(e) => handleSubmit(e)}
             />
           </div>
