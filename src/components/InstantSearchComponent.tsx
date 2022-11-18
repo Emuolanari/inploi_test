@@ -1,21 +1,29 @@
 import { InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
+import { useRouter } from 'next/router'
 
 interface Props {
   children: React.ReactNode
   searchState?: any
-  onSearchStateChange?: (searchState: any) => void
 }
 
 export const InstantSearchComponent: React.FC<Props> = ({
   children,
   searchState,
-  onSearchStateChange,
 }) => {
+  const router = useRouter()
   const searchClient = algoliasearch(
     process.env.ALGOLIA_APP_ID ?? '',
     process.env.ALGOLIA_API_KEY ?? ''
   )
+
+  const searchStateToUrl = (searchState: any) =>
+    searchState ? `${router.pathname}?${router.query}` : ''
+
+  const onSearchStateChange = (searchState: any) => {
+    const href = searchStateToUrl(searchState)
+    if (router.pathname == '/jobs') router.push(href, href, { shallow: true })
+  }
 
   return (
     <InstantSearch

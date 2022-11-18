@@ -2,7 +2,6 @@ import { SearchBox } from 'react-instantsearch-dom'
 // import { hitsPerPage } from 'instantsearch.js/es/widgets';
 import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import qs from 'qs'
 import { PageBackgroundContext } from './_app'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
 
@@ -13,13 +12,13 @@ export default function Home() {
       'bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]'
     )
   })
-  const [queryObject, setQueryObject] = useState({ query: '' })
+  const [searchTerm, setSearchTerm] = useState<string>()
   const router = useRouter()
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-
-    if (queryObject) router.push({ pathname: '/jobs', query: queryObject })
+    if (searchTerm)
+      router.push({ pathname: '/jobs', query: { query: searchTerm } })
   }
 
   return (
@@ -33,9 +32,7 @@ export default function Home() {
               translations={{
                 placeholder: 'Search jobs by keyword or location',
               }}
-              onChange={(e) =>
-                setQueryObject({ ...queryObject, query: e.currentTarget.value })
-              }
+              onChange={(e) => setSearchTerm(e.currentTarget.value)}
               onSubmit={(e) => handleSubmit(e)}
             />
           </div>
