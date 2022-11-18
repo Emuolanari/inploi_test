@@ -1,15 +1,17 @@
 import { SearchBox } from 'react-instantsearch-dom'
 // import { hitsPerPage } from 'instantsearch.js/es/widgets';
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
-  setBackground(
-    'bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]'
-  )
+  useEffect(() => {
+    setBackground(
+      'bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]'
+    )
+  })
   const [searchTerm, setSearchTerm] = useState('')
   const router = useRouter()
 

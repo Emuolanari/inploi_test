@@ -1,7 +1,10 @@
 import { ChevronRightIcon, PlusIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 
-export const JobCard: React.FC = ({ hit }: any) => {
+interface Props {
+  hit: any
+}
+export const JobCard: React.FC<Props> = ({ hit }) => {
   const [descriptionOpen, setDescriptionOpen] = useState(false)
 
   return (
@@ -37,17 +40,14 @@ export const JobCard: React.FC = ({ hit }: any) => {
           <p>{hit?.description}</p>
           <div className="flex justify-between mt-5">
             <p className="text-gray-400">{hit?.town}</p>
-            <button className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 rounded-md">
-              <a
-                className="text-sm"
-                href={hit?.apply_url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Apply now
-              </a>{' '}
-              <ChevronRightIcon className="w-5 h-5" />
-            </button>
+            <a
+              className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 text-sm rounded-md"
+              href={hit?.apply_url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Apply now <ChevronRightIcon className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
