@@ -47,7 +47,6 @@ a {
   background-color: rgb(249 250 251);
   border: 1px solid rgb(209 213 219);
   border-radius: 0.5rem;
-  /* focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 */
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,3 +58,7 @@ a {
 .ais-SearchBox input:focus {
   border: #86dcca;
 }
+.ais-Hits-list {
+  margin-top: 10px;
+}
+/* focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 */

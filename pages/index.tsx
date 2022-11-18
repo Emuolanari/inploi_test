@@ -1,46 +1,46 @@
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
+import { SearchBox } from 'react-instantsearch-dom'
 // import { hitsPerPage } from 'instantsearch.js/es/widgets';
-import algoliasearch from 'algoliasearch/lite'
-import Hit from '../src/components/Hit'
+import React, { useContext, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import qs from 'qs'
+import { PageBackgroundContext } from './_app'
+import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
 
 export default function Home() {
-  const searchClient = algoliasearch(
-    process.env.ALGOLIA_APP_ID ?? '',
-    process.env.ALGOLIA_API_KEY ?? ''
-  )
+  const { setBackground } = useContext(PageBackgroundContext)
+  useEffect(() => {
+    setBackground(
+      'bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]'
+    )
+  })
+  const [queryObject, setQueryObject] = useState({ query: '' })
+  const router = useRouter()
+
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+
+    if (queryObject) router.push({ pathname: '/jobs', query: queryObject })
+  }
+
   return (
-    <>
-      <div className="flex flex-col min-h-screen bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]">
-        {/* using relative positioning for the sake of not copying the logo to both pages */}
-        <div className="flex relative justify-end top-6 right-7">
-          <button className="bg-primary text-white text-sm py-2 px-6 rounded-md">
-            Login
-          </button>
-        </div>
-        <div className="flex flex-col flex-auto justify-start items-center mt-11">
-          <p className="text-4xl font-bold">Find a job you love 🫶</p>
-          <p className="text-4xl font-bold">with Paradigmo.</p>
-          <div className="mt-4">
-            <InstantSearch
-              indexName={
-                process.env.ALGOLIA_INDEX_NAME ?? 'development_jobs_index'
+    <div className="flex flex-col flex-auto justify-center items-center mt-11">
+      <p className="text-4xl font-bold">Find a job you love 🫶</p>
+      <p className="text-4xl font-bold">with Paradigmo.</p>
+      <div className="mt-4 w-full">
+        <InstantSearchComponent>
+          <div className="flex flex-col m-6 sm:mx-[10%] md:mx-[15%] lg:mx-[25%] ">
+            <SearchBox
+              translations={{
+                placeholder: 'Search jobs by keyword or location',
+              }}
+              onChange={(e) =>
+                setQueryObject({ ...queryObject, query: e.currentTarget.value })
               }
-              refresh={true}
-              searchClient={searchClient}
-            >
-              {/* Widgets */}
-              <div className="mx-11 flex flex-col">
-                <SearchBox
-                  translations={{
-                    placeholder: 'Search jobs by keyword or location',
-                  }}
-                />
-                <Hits hitComponent={Hit} />
-              </div>
-            </InstantSearch>
+              onSubmit={(e) => handleSubmit(e)}
+            />
           </div>
-        </div>
+        </InstantSearchComponent>
       </div>
-    </>
+    </div>
   )
 }

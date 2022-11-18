@@ -1,10 +1,46 @@
 import { BriefcaseIcon } from '@heroicons/react/solid'
-import { jobs } from '../data/jobs'
+import { Hits, SearchBox } from 'react-instantsearch-dom'
 import { JobCard } from '../src/components/JobCard'
+import { useContext, useEffect } from 'react'
+import { PageBackgroundContext } from './_app'
+import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
+import { useRouter } from 'next/router'
+import qs from 'qs'
 
 export default function Jobs() {
+  const router = useRouter()
+  const urlToSearchState = () => {
+    if (typeof window !== 'undefined') {
+      const pathnameMatches = window.location.pathname.match(/jobs\/(.*?)\/?$/)
+      const { query } = qs.parse(window.location.search.slice(1))
+      return {
+        query: decodeURIComponent(query as string),
+      }
+    }
+  }
+
+  const searchStateToUrl = (searchState: any) =>
+    searchState
+      ? `${window.location.pathname}?${qs.stringify(searchState)}`
+      : ''
+  const { setBackground } = useContext(PageBackgroundContext)
+  useEffect(() => {
+    setBackground('bg-[#F3F4EE]')
+  })
+
+  const onSearchStateChange = (searchState: any) => {
+    const href = searchStateToUrl(searchState)
+    router.push(href, href, { shallow: true })
+    // console.log('hred', href)
+    // console.log('searchState', searchState)
+
+    // Router.push(href, href, {
+    //   shallow: true,
+    // })
+  }
+
   return (
-    <div className="bg-[#F3F4EE] flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <div>
         <div className="flex flex-col items-center mt-5">
           <div className="gap-4 flex">
@@ -16,17 +52,21 @@ export default function Jobs() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
           </p>
         </div>
-        <div className="flex flex-col flex-auto justify-center items-center mt-5 mx-11">
-          {jobs.map((job) => (
-            <div className="mb-5 w-[100%] md:w-[70%]" key={job.id}>
-              <JobCard
-                title={job.title}
-                location={job.location}
-                description={job.description}
+        <InstantSearchComponent
+          searchState={urlToSearchState()}
+          onSearchStateChange={onSearchStateChange}
+        >
+          <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[25%] ">
+            <div className="invisible">
+              <SearchBox
+                translations={{
+                  placeholder: 'Search jobs by keyword or location',
+                }}
               />
             </div>
-          ))}
-        </div>
+            <Hits hitComponent={JobCard} />
+          </div>
+        </InstantSearchComponent>
       </div>
     </div>
   )
