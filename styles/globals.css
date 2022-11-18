@@ -38,6 +38,7 @@ a {
 .ais-SearchBox input {
   display: block;
   width: 100%;
+  font-size: 2px;
   padding: 1rem;
   padding-left: 2.5rem;
   font-size: 0.875rem;
@@ -47,6 +48,12 @@ a {
   border: 1px solid rgb(209 213 219);
   border-radius: 0.5rem;
   /* focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 */
+}
+
+@media only screen and (max-width: 600px) {
+  .ais-SearchBox input::placeholder {
+    font-size: smaller;
+  }
 }
 
 .ais-SearchBox input:focus {
