@@ -5,39 +5,13 @@ import { useContext, useEffect } from 'react'
 import { PageBackgroundContext } from './_app'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
 import { useRouter } from 'next/router'
-import qs from 'qs'
 
 export default function Jobs() {
   const router = useRouter()
-  const urlToSearchState = () => {
-    if (typeof window !== 'undefined') {
-      const pathnameMatches = window.location.pathname.match(/jobs\/(.*?)\/?$/)
-      const { query } = qs.parse(window.location.search.slice(1))
-      return {
-        query: decodeURIComponent(query as string),
-      }
-    }
-  }
-
-  const searchStateToUrl = (searchState: any) =>
-    searchState
-      ? `${window.location.pathname}?${qs.stringify(searchState)}`
-      : ''
   const { setBackground } = useContext(PageBackgroundContext)
   useEffect(() => {
     setBackground('bg-[#F3F4EE]')
   })
-
-  const onSearchStateChange = (searchState: any) => {
-    const href = searchStateToUrl(searchState)
-    router.push(href, href, { shallow: true })
-    // console.log('hred', href)
-    // console.log('searchState', searchState)
-
-    // Router.push(href, href, {
-    //   shallow: true,
-    // })
-  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -52,17 +26,10 @@ export default function Jobs() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
           </p>
         </div>
-        <InstantSearchComponent
-          searchState={urlToSearchState()}
-          onSearchStateChange={onSearchStateChange}
-        >
-          <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[25%] ">
+        <InstantSearchComponent searchState={router.query}>
+          <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[23%] ">
             <div className="invisible">
-              <SearchBox
-                translations={{
-                  placeholder: 'Search jobs by keyword or location',
-                }}
-              />
+              <SearchBox />
             </div>
             <Hits hitComponent={JobCard} />
           </div>
