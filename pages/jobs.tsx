@@ -18,9 +18,8 @@ export default function Jobs() {
         </div>
         <div className="flex flex-col flex-auto justify-center items-center mt-5 mx-11">
           {jobs.map((job) => (
-            <div className="mb-5 w-[100%] md:w-[70%]">
+            <div className="mb-5 w-[100%] md:w-[70%]" key={job.id}>
               <JobCard
-                key={job.id}
                 title={job.title}
                 location={job.location}
                 description={job.description}
