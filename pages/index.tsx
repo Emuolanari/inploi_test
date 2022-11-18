@@ -1,10 +1,15 @@
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
+import { InstantSearch, SearchBox } from 'react-instantsearch-dom'
 // import { hitsPerPage } from 'instantsearch.js/es/widgets';
 import algoliasearch from 'algoliasearch/lite'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useRouter } from 'next/router'
+import { PageBackgroundContext } from './_app'
 
 export default function Home() {
+  const { setBackground } = useContext(PageBackgroundContext)
+  setBackground(
+    'bg-gradient-to-r from-primary-100 via-primary-200 to-[#F6f9EB]'
+  )
   const searchClient = algoliasearch(
     process.env.ALGOLIA_APP_ID ?? '',
     process.env.ALGOLIA_API_KEY ?? ''
@@ -12,12 +17,13 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const router = useRouter()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    router.push({
-      pathname: '/jobs',
-      query: { searchTerm },
-    })
+    if (searchTerm)
+      router.push({
+        pathname: '/jobs',
+        query: { searchTerm },
+      })
   }
 
   return (

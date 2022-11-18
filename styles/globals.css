@@ -59,3 +59,9 @@ a {
 .ais-SearchBox input:focus {
   border: #86dcca;
 }
+.ais-Hits-list {
+  margin-top: 10px;
+}
+.ais-Hits-item {
+  margin-bottom: 10px;
+}
