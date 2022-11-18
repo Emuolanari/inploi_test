@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 interface Props {
   hit: any //find type
 }
@@ -24,6 +22,7 @@ const Hit: React.FC<Props> = ({ hit }) => {
           <a
             href={hit.apply_url}
             target="_blank"
+            rel="noreferrer"
             className="text-blue-400 hover:text-blue-600 justify-self-end"
           >
             click here to apply
