@@ -39,8 +39,7 @@ const Hit: React.FC<Props> = ({ hit }) => {
             {hit.town}
           </p>
           <p>
-            <span className="font-bold">Job title:</span>{' '}
-            {hit.title.replace(/_/g, '-')}
+            <span className="font-bold">Job title:</span> {hit.title}
           </p>
         </div>
         <div className="flex justify-between flex-col sm:flex-row">
@@ -51,7 +50,7 @@ const Hit: React.FC<Props> = ({ hit }) => {
           </p>
           <p>
             <span className="font-bold">Employment Type:</span>{' '}
-            {hit.employment_type}
+            {hit.employment_type.replace(/_/g, '-')}
           </p>
         </div>
       </div>
