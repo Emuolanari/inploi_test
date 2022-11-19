@@ -41,12 +41,10 @@ a {
   display: none;
 }
 .ais-SearchBox input {
-  display: block;
+  /* display: block; */
   width: 100%;
-  font-size: 2px;
   padding: 1rem 2rem;
   font-size: 0.875rem;
-  line-height: 1.25rem;
   color: #1a202c;
   background-color: rgb(249 250 251);
   border: 1px solid rgb(209 213 219);
