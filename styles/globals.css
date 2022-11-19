@@ -74,7 +74,7 @@ a {
   background-color: rgba(128, 128, 128, 0.6);
   padding: 0.2rem 0.4rem;
   border-radius: 2px;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   color: white;
 }
 
