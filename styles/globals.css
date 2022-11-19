@@ -66,5 +66,12 @@ a {
 
 .ais-Pagination-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.ais-Pagination-item {
+  background-color: rgba(128, 128, 128, 0.6);
+  padding: 0.6rem;
+  border-radius: 2px;
+  color: white;
 }

@@ -29,7 +29,7 @@ export default function Jobs() {
   return (
     <>
       <Head>
-        <title>Inploi - Our current openings</title>
+        <title>Inploi - Current job openings</title>
         <meta name="description" content="View our current vacancies" />
       </Head>
       <div className="flex flex-col min-h-screen">
