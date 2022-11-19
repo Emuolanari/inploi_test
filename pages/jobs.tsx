@@ -45,7 +45,7 @@ export default function Jobs() {
               <h1 className="font-bold text-2xl md:text-4xl">Job Openings</h1>
               <BriefcaseIcon className="w-10 h-10" fill="#92705A" />
             </div>
-            <p className="flex text-center w-[55%] md:mt-5">
+            <p className="flex text-center w-[55%] mt-5 text-base md:text-lg lg:text-xl ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
             </p>

@@ -72,7 +72,7 @@ a {
 
 .ais-Pagination-link {
   background-color: rgba(128, 128, 128, 0.6);
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 2px;
   border: 1px solid #000;
   color: white;
@@ -88,8 +88,11 @@ a {
 .ais-Pagination-item--disabled span {
   background-color: transparent;
   border: none;
-  color: gray;
+  color: #888888;
 }
 .ais-Pagination-item--disabled span:hover {
   box-shadow: none;
+}
+.ais-Stats-text {
+  color: #888888;
 }
