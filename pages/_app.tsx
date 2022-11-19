@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createContext, useState } from 'react'
-import Nav from '../src/components/Nav'
+import Nav from '../src/components/Nav/Nav'
 import Head from 'next/head'
 
 interface Context {

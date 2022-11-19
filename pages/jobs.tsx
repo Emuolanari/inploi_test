@@ -6,10 +6,10 @@ import {
   SearchBox,
   Stats,
 } from 'react-instantsearch-dom'
-import { JobCard } from '../src/components/JobCard'
+import { JobCard } from '../src/components/JobCard/JobCard'
 import { useContext, useEffect } from 'react'
 import { PageBackgroundContext } from './_app'
-import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
+import { InstantSearchComponent } from '../src/components/InstantSearchComponent/InstantSearchComponent'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import qs from 'qs'
