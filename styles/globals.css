@@ -10,7 +10,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-p {
+p,
+button,
+span {
   font-family: 'Raleway';
 }
 
