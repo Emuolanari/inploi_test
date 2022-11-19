@@ -64,8 +64,8 @@ export default function Jobs() {
                   translations={{
                     stats(nbHits) {
                       return nbHits > 0
-                        ? `${nbHits} relevant results found`
-                        : `No results found for this search`
+                        ? `${nbHits} relevant jobs found`
+                        : `No jobs found for this search`
                     },
                   }}
                 />
