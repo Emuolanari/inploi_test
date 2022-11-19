@@ -74,7 +74,7 @@ a {
 .ais-Pagination-list {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 3%;
 }
 
 .ais-Pagination-item {
