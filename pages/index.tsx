@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Inploi - Find a job you love</title>
+        <title>Paradigmo - Find a job you love</title>
         <meta
           name="description"
           content="We help thousands of individuals find suitable jobs"

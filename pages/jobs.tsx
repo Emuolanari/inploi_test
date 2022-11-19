@@ -35,7 +35,7 @@ export default function Jobs() {
   return (
     <>
       <Head>
-        <title>Inploi - Current job openings</title>
+        <title>Paradigmo - Current job openings</title>
         <meta name="description" content="View our current vacancies" />
       </Head>
       <div className="flex flex-col min-h-screen">
