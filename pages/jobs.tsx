@@ -15,13 +15,15 @@ export default function Jobs() {
     setBackground('bg-[#F3F4EE]')
   })
 
-  const createURL = (state: any) => `/jobs?${qs.stringify(state)}`
+  const createURL = (state: any) => `?${qs.stringify(state)}`
 
-  const searchStateToUrl = (searchState: any) =>
-    searchState ? createURL(searchState) : ''
+  const searchStateToUrl = (state: any) => (state ? createURL(state) : '')
+
   const onSearchStateChange = (searchState: any) => {
     const href = searchStateToUrl(searchState)
-    if (router.pathname == '/jobs') router.push(href, href, { shallow: true })
+    router.push(href, href, {
+      shallow: true,
+    })
   }
 
   return (
@@ -45,6 +47,7 @@ export default function Jobs() {
           <InstantSearchComponent
             onSearchStateChange={onSearchStateChange}
             createURL={createURL}
+            searchState={router.query}
           >
             <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[23%] mb-9 ">
               <div className="invisible">
