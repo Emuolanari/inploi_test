@@ -71,7 +71,7 @@ export default function Jobs() {
                 />
               </div>
               <Hits hitComponent={JobCard} />
-              <Configure hitsPerPage={10} />
+              {/* <Configure hitsPerPage={10} /> */}
               <Pagination />
             </div>
           </InstantSearchComponent>
