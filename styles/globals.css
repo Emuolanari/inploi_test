@@ -79,9 +79,17 @@ a {
 }
 
 .ais-Pagination-link:hover {
-  box-shadow: 2px 5px 10px #888888;
+  box-shadow: 2px 4px 12px #888888;
 }
 .ais-Pagination-link--selected {
   background-color: transparent;
   color: #000;
+}
+.ais-Pagination-item--disabled span {
+  background-color: transparent;
+  border: none;
+  color: gray;
+}
+.ais-Pagination-item--disabled span:hover {
+  box-shadow: none;
 }
