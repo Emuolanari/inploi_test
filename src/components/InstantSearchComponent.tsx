@@ -18,8 +18,6 @@ export const InstantSearchComponent: React.FC<Props> = ({
     process.env.ALGOLIA_API_KEY ?? ''
   )
 
-  // const urlToSearchState = (location: any) => qs.parse(location.search.slice(1))
-
   return (
     <InstantSearch
       indexName={process.env.ALGOLIA_INDEX_NAME ?? 'development_jobs_index'}
