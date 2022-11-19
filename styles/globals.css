@@ -73,12 +73,18 @@ a {
 
 .ais-Pagination-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
 }
 
 .ais-Pagination-item {
   background-color: rgba(128, 128, 128, 0.6);
-  padding: 0.6rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 2px;
+  border: 1px solid #000;
   color: white;
+}
+
+.ais-Pagination-item:hover {
+  box-shadow: 2px 5px 10px #888888;
 }
