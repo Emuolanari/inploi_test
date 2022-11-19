@@ -1,5 +1,6 @@
 import { ChevronRightIcon, PlusIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
+import ReactHtmlParser from 'react-html-parser'
 
 interface Props {
   hit: any
@@ -37,7 +38,7 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
       <div className={`${descriptionOpen ? 'transition' : 'hidden'}`}>
         <hr />
         <div className="flex flex-col py-6">
-          <p>{hit?.description}</p>
+          <p>{ReactHtmlParser(hit?.description)}</p>
           <div className="flex justify-between mt-5">
             <p className="text-gray-400">{hit?.town}</p>
             <a
