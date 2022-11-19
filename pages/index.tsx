@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import Head from 'next/head'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
+import qs from 'qs'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
@@ -14,12 +15,15 @@ export default function Home() {
     )
   })
   const [searchTerm, setSearchTerm] = useState<string>()
+  console.log('fdfdsfa', qs.stringify(searchTerm));
+  
   const router = useRouter()
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    if (searchTerm)
+    if (searchTerm) {
       router.push({ pathname: '/jobs', query: { query: searchTerm, page: 1 } })
+    }
   }
 
   return (
