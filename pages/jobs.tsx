@@ -56,10 +56,10 @@ export default function Jobs() {
             searchState={router.query}
           >
             <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[23%] mb-9 ">
-              <div className="invisible">
+              <div className="hidden">
                 <SearchBox />
               </div>
-              <div className="flex justify-center my-6">
+              <div className="flex justify-center my-14 ">
                 <Stats
                   translations={{
                     stats(nbHits) {
