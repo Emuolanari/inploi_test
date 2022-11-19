@@ -63,3 +63,8 @@ a {
 .ais-Hits-list {
   margin-top: 10px;
 }
+
+.ais-Pagination-list {
+  display: flex;
+  justify-content: space-between;
+}
