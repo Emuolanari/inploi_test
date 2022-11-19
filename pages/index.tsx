@@ -35,7 +35,9 @@ export default function Home() {
         />
       </Head>
       <div className="flex flex-col flex-auto justify-center items-center mt-11">
-        <p className="text-4xl font-bold">Find a job you love &#129782;</p>
+        <p className="text-4xl font-bold">
+          Find a job you love <span className="font-normal">&#129782;</span>
+        </p>
         <p className="text-4xl font-bold">with Paradigmo.</p>
         <div className="mt-4 w-full">
           <InstantSearchComponent>
