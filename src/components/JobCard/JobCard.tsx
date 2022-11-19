@@ -1,6 +1,7 @@
 import { ChevronRightIcon, PlusIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 import ReactHtmlParser from 'react-html-parser'
+import { startCaseWords } from '../../../lib/startCaseWords'
 
 interface Props {
   hit: any
@@ -21,7 +22,7 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
           descriptionOpen ? '' : 'cursor-pointer'
         }`}
       >
-        <div className=" text-base font-bold">{hit?.title}</div>
+        <div className=" text-base font-bold">{startCaseWords(hit.title)}</div>
         {descriptionOpen ? (
           <XIcon
             className="w-8 h-8 cursor-pointer"
