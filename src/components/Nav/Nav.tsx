@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Nav: React.FC = () => {
   return (
-    <div className="flex justify-between py-5 px-[4%]">
+    <div className="flex justify-between py-8 px-[6%]">
       <Link href="/" className="">
         <Image src="/Paradigmo_Logo.png" alt="logo" height={35} width={35} />
       </Link>
