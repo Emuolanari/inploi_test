@@ -15,8 +15,7 @@ export default function Home() {
     )
   })
   const [searchTerm, setSearchTerm] = useState<string>()
-  console.log('fdfdsfa', qs.stringify(searchTerm));
-  
+
   const router = useRouter()
 
   const handleSubmit = (e: React.SyntheticEvent) => {
@@ -36,7 +35,7 @@ export default function Home() {
         />
       </Head>
       <div className="flex flex-col flex-auto justify-center items-center mt-11">
-        <p className="text-4xl font-bold">Find a job you love 🫶</p>
+        <p className="text-4xl font-bold">Find a job you love &#129782;</p>
         <p className="text-4xl font-bold">with Paradigmo.</p>
         <div className="mt-4 w-full">
           <InstantSearchComponent>
