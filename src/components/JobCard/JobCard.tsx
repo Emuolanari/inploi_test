@@ -25,12 +25,12 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
         <div className=" text-base font-bold">{startCaseWords(hit.title)}</div>
         {descriptionOpen ? (
           <XIcon
-            className="w-8 h-8 cursor-pointer"
+            className="w-5 h-5 cursor-pointer"
             onClick={() => setDescriptionOpen(false)}
           />
         ) : (
           <PlusIcon
-            className="w-8 h-8 cursor-pointer"
+            className="w-5 h-5 cursor-pointer"
             onClick={() => setDescriptionOpen(true)}
           />
         )}
