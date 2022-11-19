@@ -34,7 +34,6 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
           />
         )}
       </div>
-      {/* come back to this to ease the description into view slowly */}
       <div className={`${descriptionOpen ? 'transition' : 'hidden'}`}>
         <hr />
         <div className="flex flex-col py-6">
