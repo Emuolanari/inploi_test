@@ -1,11 +1,9 @@
 import { SearchBox } from 'react-instantsearch-dom'
-// import { hitsPerPage } from 'instantsearch.js/es/widgets';
 import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import Head from 'next/head'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
-import qs from 'qs'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
@@ -35,9 +33,7 @@ export default function Home() {
         />
       </Head>
       <div className="flex flex-col flex-auto justify-center items-center mt-11">
-        <p className="text-4xl font-bold">
-          Find a job you love <span className="font-normal">&#129782;</span>
-        </p>
+        <p className="text-4xl font-bold">Find a job you love &#129782;</p>
         <p className="text-4xl font-bold">with Paradigmo.</p>
         <div className="mt-4 w-full">
           <InstantSearchComponent>
