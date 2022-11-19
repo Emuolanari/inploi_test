@@ -25,10 +25,10 @@ a {
 }
 .ais-SearchBox-submitIcon {
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   height: 0.9rem;
   width: 0.9rem;
-  top: 23px;
+  top: 20px;
 }
 
 .ais-SearchBox-resetIcon {
@@ -37,7 +37,7 @@ a {
 .ais-SearchBox input {
   /* display: block; */
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   font-size: 0.875rem;
   color: #1a202c;
   background-color: rgb(249 250 251);
