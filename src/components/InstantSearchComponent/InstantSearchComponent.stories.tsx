@@ -21,8 +21,8 @@ DefaultInstantSearchComponent.args = {
     </>
   ),
 }
-export const SecondInstantSearchComponent = Template.bind({})
-SecondInstantSearchComponent.args = {
+export const InstantSearchComponentsWithCards = Template.bind({})
+InstantSearchComponentsWithCards.args = {
   children: (
     <>
       <SearchBox />

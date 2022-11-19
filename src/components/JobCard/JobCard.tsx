@@ -21,7 +21,7 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
           descriptionOpen ? '' : 'cursor-pointer'
         }`}
       >
-        <p className=" text-base font-bold">{hit?.title}</p>
+        <div className=" text-base font-bold">{hit?.title}</div>
         {descriptionOpen ? (
           <XIcon
             className="w-8 h-8 cursor-pointer"
@@ -37,9 +37,9 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
       <div className={`${descriptionOpen ? 'transition' : 'hidden'}`}>
         <hr />
         <div className="flex flex-col py-6">
-          <p>{ReactHtmlParser(hit?.description)}</p>
+          <div>{ReactHtmlParser(hit?.description)}</div>
           <div className="flex justify-between mt-5">
-            <p className="text-gray-400">{hit?.town}</p>
+            <div className="text-gray-400">{hit?.town}</div>
             <a
               className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 text-xs sm:text-sm rounded-md"
               href={hit?.apply_url}
