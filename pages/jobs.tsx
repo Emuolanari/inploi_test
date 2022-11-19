@@ -6,6 +6,7 @@ import { PageBackgroundContext } from './_app'
 import { InstantSearchComponent } from '../src/components/InstantSearchComponent'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import qs from 'qs'
 
 export default function Jobs() {
   const router = useRouter()
@@ -13,6 +14,15 @@ export default function Jobs() {
   useEffect(() => {
     setBackground('bg-[#F3F4EE]')
   })
+
+  const createURL = (state: any) => `/jobs?${qs.stringify(state)}`
+
+  const searchStateToUrl = (searchState: any) =>
+    searchState ? createURL(searchState) : ''
+  const onSearchStateChange = (searchState: any) => {
+    const href = searchStateToUrl(searchState)
+    if (router.pathname == '/jobs') router.push(href, href, { shallow: true })
+  }
 
   return (
     <>
@@ -32,7 +42,10 @@ export default function Jobs() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
             </p>
           </div>
-          <InstantSearchComponent searchState={router.query}>
+          <InstantSearchComponent
+            onSearchStateChange={onSearchStateChange}
+            createURL={createURL}
+          >
             <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[23%] mb-9 ">
               <div className="invisible">
                 <SearchBox />
