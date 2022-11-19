@@ -41,7 +41,7 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
           <div className="flex justify-between mt-5">
             <p className="text-gray-400">{hit?.town}</p>
             <a
-              className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 text-sm rounded-md"
+              className="flex gap-3 bg-[#111840] items-center text-white px-3 md:px-6 py-2 text-xs sm:text-sm rounded-md"
               href={hit?.apply_url}
               target="_blank"
               rel="noreferrer"
