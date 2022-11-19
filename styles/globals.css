@@ -24,14 +24,9 @@ a {
 * {
   box-sizing: border-box;
 }
-.ais-SearchBox {
-  display: flex;
-}
+
 .ais-SearchBox-form {
   position: relative;
-  display: flex;
-  flex-grow: 1;
-  flex-basis: max-content;
   width: 100%;
 }
 .ais-SearchBox-submitIcon {
