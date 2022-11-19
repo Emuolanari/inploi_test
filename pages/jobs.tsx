@@ -1,5 +1,11 @@
 import { BriefcaseIcon } from '@heroicons/react/solid'
-import { Configure, Hits, Pagination, SearchBox } from 'react-instantsearch-dom'
+import {
+  Configure,
+  Hits,
+  Pagination,
+  SearchBox,
+  Stats,
+} from 'react-instantsearch-dom'
 import { JobCard } from '../src/components/JobCard'
 import { useContext, useEffect } from 'react'
 import { PageBackgroundContext } from './_app'
@@ -52,6 +58,17 @@ export default function Jobs() {
             <div className="flex flex-col sm:mx-[10%] md:mx-[15%] lg:mx-[23%] mb-9 ">
               <div className="invisible">
                 <SearchBox />
+              </div>
+              <div className="flex justify-center my-6">
+                <Stats
+                  translations={{
+                    stats(nbHits) {
+                      return nbHits > 0
+                        ? `${nbHits} relevant results found`
+                        : `No results found for this search`
+                    },
+                  }}
+                />
               </div>
               <Hits hitComponent={JobCard} />
               <Configure hitsPerPage={10} />
