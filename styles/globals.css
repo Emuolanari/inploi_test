@@ -77,14 +77,18 @@ a {
   gap: 3%;
 }
 
-.ais-Pagination-item {
+.ais-Pagination-link {
   background-color: rgba(128, 128, 128, 0.6);
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 2px;
   border: 1px solid #000;
   color: white;
 }
 
-.ais-Pagination-item:hover {
+.ais-Pagination-link:hover {
   box-shadow: 2px 5px 10px #888888;
+}
+.ais-Pagination-link--selected {
+  background-color: transparent;
+  color: #000;
 }
