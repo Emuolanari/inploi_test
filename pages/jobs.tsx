@@ -27,9 +27,7 @@ export default function Jobs() {
 
   const onSearchStateChange = (searchState: any) => {
     const href = searchStateToUrl(searchState)
-    router.push(href, href, {
-      shallow: true,
-    })
+    router.replace(href)
   }
 
   return (
