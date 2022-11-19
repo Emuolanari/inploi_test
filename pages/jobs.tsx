@@ -54,7 +54,7 @@ export default function Jobs() {
                 <SearchBox />
               </div>
               <Hits hitComponent={JobCard} />
-              <Configure hitsPerPage={10} />
+              {/* <Configure hitsPerPage={10} /> */}
               <Pagination />
             </div>
           </InstantSearchComponent>
