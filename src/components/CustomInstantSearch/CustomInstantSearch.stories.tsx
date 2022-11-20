@@ -25,7 +25,7 @@ export const CustomInstantSearchsWithCards = Template.bind({})
 CustomInstantSearchsWithCards.args = {
   children: (
     <>
-      <SearchBox />
+      {/* <SearchBox /> */}
       <Hits hitComponent={JobCard} />
     </>
   ),
