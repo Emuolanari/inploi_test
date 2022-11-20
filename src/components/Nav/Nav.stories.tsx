@@ -9,6 +9,3 @@ export default {
 const Template: ComponentStory<typeof Nav> = (args) => <Nav {...args} />
 
 export const TopNav = Template.bind({})
-
-export const SecondaryNav = Template.bind({})
-TopNav.args = {}
