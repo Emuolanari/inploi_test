@@ -9,7 +9,7 @@ import {
 import { JobCard } from '../src/components/JobCard/JobCard'
 import { useContext, useEffect } from 'react'
 import { PageBackgroundContext } from './_app'
-import { CustomInstantSearch } from '../src/components/InstantSearchComponent/CustomInstantSearch'
+import { CustomInstantSearch } from '../src/components/CustomInstantSearch/CustomInstantSearch'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import qs from 'qs'

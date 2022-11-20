@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import Head from 'next/head'
-import { CustomInstantSearch } from '../src/components/InstantSearchComponent/CustomInstantSearch'
+import { CustomInstantSearch } from '../src/components/CustomInstantSearch/CustomInstantSearch'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
