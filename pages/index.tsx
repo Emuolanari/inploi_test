@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import Head from 'next/head'
 import { CustomInstantSearch } from '../src/components/CustomInstantSearch/CustomInstantSearch'
+import { Intro } from '../src/components/Intro/Intro'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
@@ -33,10 +34,11 @@ export default function Home() {
         />
       </Head>
       <div className="flex flex-col flex-auto justify-center items-center mt-11">
-        <div className="text-center text-xl sm:text-4xl font-bold mx-[10%] md:mx-auto">
-          <p>Find a job you love &#129782;</p>
-          <p>with Paradigmo</p>
-        </div>
+        <Intro
+          title1="Find a job you love &#129782;"
+          title2="with Paradigmo"
+          fontSize="bold"
+        />
         <div className="mt-4 w-full">
           <CustomInstantSearch>
             <div className="flex flex-col m-6 sm:mx-[10%] md:mx-[15%] lg:mx-[25%] ">
