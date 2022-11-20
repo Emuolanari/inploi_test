@@ -47,10 +47,15 @@ a {
   border-radius: 0.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+.ais-SearchBox input::placeholder {
+  font-size: 13px;
+}
+@media only screen and (max-width: 350px) {
   .ais-SearchBox input::placeholder {
-    font-size: 12px;
+    font-size: 9px;
   }
+}
+@media only screen and (max-width: 600px) {
   .ais-SearchBox input {
     padding-right: 2rem;
     padding-left: 1rem;
