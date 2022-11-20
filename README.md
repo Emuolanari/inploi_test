@@ -22,7 +22,17 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the website.
-Open [http://localhost:6006](http://localhost:6006) with your browser to view storybook.
+
+
+To view the storybook, run:
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+Then open [http://localhost:6006](http://localhost:6006) with your browser to view storybook.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
