@@ -12,7 +12,8 @@ export const DefaultJobCard = Template.bind({})
 DefaultJobCard.args = {
   hit: {
     title: 'Software Engineer',
-    description: 'Coding is fun. You should do this all day',
+    description:
+      'We are looking for an experienced Front-End Developer to join our growing team. Working as part of a talented team, you will be helping our varied clients realise their goals and ambitions through a wide range of digital projects',
     apply_url: 'google.com',
     town: 'London',
   },
