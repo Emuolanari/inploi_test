@@ -49,7 +49,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   .ais-SearchBox input::placeholder {
-    font-size: smaller;
+    font-size: 12px;
   }
   .ais-SearchBox input {
     padding-right: 2rem;
