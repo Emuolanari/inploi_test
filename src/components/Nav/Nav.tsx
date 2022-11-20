@@ -7,7 +7,7 @@ const Nav: React.FC = () => {
       <Link href="/" className="">
         <Image src="/Paradigmo_Logo.png" alt="logo" height={35} width={35} />
       </Link>
-      <button className="bg-primary-100 hover:bg-primary text-white text-sm py-2 px-6 rounded-md">
+      <button className="bg-primary-300 hover:bg-primary text-white text-sm py-2 px-6 rounded-md">
         Login
       </button>
     </div>
