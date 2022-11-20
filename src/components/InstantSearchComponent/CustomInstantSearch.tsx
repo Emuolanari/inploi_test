@@ -7,7 +7,7 @@ interface Props {
   searchState?: any
 }
 
-export const InstantSearchComponent: React.FC<Props> = ({
+export const CustomInstantSearch: React.FC<Props> = ({
   children,
   createURL,
   onSearchStateChange,

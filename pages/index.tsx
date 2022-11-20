@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { PageBackgroundContext } from './_app'
 import Head from 'next/head'
-import { InstantSearchComponent } from '../src/components/InstantSearchComponent/InstantSearchComponent'
+import { CustomInstantSearch } from '../src/components/InstantSearchComponent/CustomInstantSearch'
 
 export default function Home() {
   const { setBackground } = useContext(PageBackgroundContext)
@@ -38,7 +38,7 @@ export default function Home() {
           <p>with Paradigmo</p>
         </div>
         <div className="mt-4 w-full">
-          <InstantSearchComponent>
+          <CustomInstantSearch>
             <div className="flex flex-col m-6 sm:mx-[10%] md:mx-[15%] lg:mx-[25%] ">
               <SearchBox
                 translations={{
@@ -48,7 +48,7 @@ export default function Home() {
                 onSubmit={(e) => handleSubmit(e)}
               />
             </div>
-          </InstantSearchComponent>
+          </CustomInstantSearch>
         </div>
       </div>
     </>

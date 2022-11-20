@@ -9,7 +9,7 @@ import {
 import { JobCard } from '../src/components/JobCard/JobCard'
 import { useContext, useEffect } from 'react'
 import { PageBackgroundContext } from './_app'
-import { InstantSearchComponent } from '../src/components/InstantSearchComponent/InstantSearchComponent'
+import { CustomInstantSearch } from '../src/components/InstantSearchComponent/CustomInstantSearch'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import qs from 'qs'
@@ -48,7 +48,7 @@ export default function Jobs() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
             </p>
           </div>
-          <InstantSearchComponent
+          <CustomInstantSearch
             onSearchStateChange={onSearchStateChange}
             createURL={createURL}
             searchState={router.query}
@@ -72,7 +72,7 @@ export default function Jobs() {
               {/* <Configure hitsPerPage={10} /> */}
               <Pagination />
             </div>
-          </InstantSearchComponent>
+          </CustomInstantSearch>
         </div>
       </div>
     </>
