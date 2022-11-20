@@ -15,3 +15,9 @@ CurrentIntro.args = {
   fontSize: 'bold',
 }
 
+export const SecondaryIntro = Template.bind({})
+SecondaryIntro.args = {
+  title1: 'Welcome to the top search platform',
+  title2: 'all our employers are legitimate',
+  fontSize: 'extra',
+}
