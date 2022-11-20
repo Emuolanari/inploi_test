@@ -61,9 +61,9 @@ export default function Jobs() {
                 <Stats
                   translations={{
                     stats(nbHits) {
-                      return nbHits > 0
-                        ? `${nbHits} jobs found`
-                        : `No jobs found for this search`
+                      if (nbHits == 0) return 'no job found'
+                      if (nbHits == 1) return '1 job found'
+                      return `${nbHits} jobs found`
                     },
                   }}
                 />
