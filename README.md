@@ -1,4 +1,4 @@
-## How to run
+## Paradigmo
 
 First, install the project dependencies:
 
