@@ -99,3 +99,7 @@ a {
 .ais-Stats-text {
   color: #888888;
 }
+
+.ais-Pagination--noRefinement {
+  display: none;
+}
