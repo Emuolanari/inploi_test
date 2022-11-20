@@ -88,13 +88,9 @@ a {
   color: #000;
 }
 .ais-Pagination-item--disabled span {
-  background-color: transparent;
-  border: none;
-  color: #888888;
+  display: none;
 }
-.ais-Pagination-item--disabled span:hover {
-  box-shadow: none;
-}
+
 .ais-Stats-text {
   color: #888888;
 }
