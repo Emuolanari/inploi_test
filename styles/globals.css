@@ -51,8 +51,14 @@ a {
   .ais-SearchBox input::placeholder {
     font-size: smaller;
   }
+  .ais-SearchBox input {
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+  .ais-SearchBox-submitIcon {
+    right: 0.9rem;
+  }
 }
-
 .ais-SearchBox input:focus {
   outline: none;
 }
