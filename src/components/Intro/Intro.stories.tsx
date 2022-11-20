@@ -10,7 +10,7 @@ const Template: ComponentStory<typeof Intro> = (args) => <Intro {...args} />
 
 export const CurrentIntro = Template.bind({})
 CurrentIntro.args = {
-  title1: 'Find a job you love &#129782;',
+  title1: 'Find a job you love  🫶',
   title2: 'with Paradigmo',
   fontSize: 'bold',
 }
