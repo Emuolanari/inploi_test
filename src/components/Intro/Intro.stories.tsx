@@ -17,7 +17,7 @@ CurrentIntro.args = {
 
 export const SecondaryIntro = Template.bind({})
 SecondaryIntro.args = {
-  title1: 'Welcome to the top search platform',
-  title2: 'all our employers are legitimate',
+  title1: 'The top job search platform 🧳',
+  title2: 'find your next role here',
   fontSize: 'extra',
 }
