@@ -29,7 +29,7 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
         />
       </div>
       <hr />
-      <div className={`${descriptionOpen ? 'transition-[height]' : 'hidden'}`}>
+      <div className={`${!descriptionOpen && 'hidden'}`}>
         <div className="py-6">
           <div>{ReactHtmlParser(hit?.description)}</div>
           <div className="flex justify-between mt-5">
