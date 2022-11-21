@@ -1,4 +1,4 @@
-import { ChevronRightIcon, PlusIcon, XIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon, PlusIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 import ReactHtmlParser from 'react-html-parser'
 import { startCaseWords } from '../../../lib/startCaseWords'
@@ -23,17 +23,10 @@ export const JobCard: React.FC<Props> = ({ hit }) => {
         }`}
       >
         <div className=" text-base font-bold">{startCaseWords(hit.title)}</div>
-        {descriptionOpen ? (
-          <XIcon
-            className="w-5 h-5 cursor-pointer"
-            onClick={() => setDescriptionOpen(false)}
-          />
-        ) : (
-          <PlusIcon
-            className="w-5 h-5 cursor-pointer"
-            onClick={() => setDescriptionOpen(true)}
-          />
-        )}
+        <PlusIcon
+          className={`w-5 h-5 cursor-pointer ${descriptionOpen && 'rotate-45'}`}
+          onClick={() => setDescriptionOpen(false)}
+        />
       </div>
       <hr />
       <div className={`${descriptionOpen ? 'transition-[height]' : 'hidden'}`}>
