@@ -63,7 +63,7 @@ export default function Jobs() {
                     stats(nbHits) {
                       if (nbHits == 0) return 'No jobs found for this search'
                       if (nbHits == 1) return '1 job found'
-                      return `${nbHits} Jobs found for this search`
+                      return `${nbHits} jobs found for this search`
                     },
                   }}
                 />
